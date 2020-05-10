@@ -4,9 +4,9 @@ spring:
   application:
     name: item-service
   datasource:
-    url: jdbc:mysql://localhost:3306/heima
+    url: jdbc:mysql://115.29.110.8:3306/heima
     username: root
-    password: root
+    password: 123456root
     hikari:
       maximum-pool-size: 30
       minimum-idle: 10
