@@ -70,7 +70,7 @@ public class CategoryController {
             category.setSort(sort);
 
             final int row = this.categoryService.add(category);
-            this.categoryService.modifyStatus(parentId,true);
+         //   this.categoryService.modifyStatus(parentId,true);
             if(row<1){
                 //响应400
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();

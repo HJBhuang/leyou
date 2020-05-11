@@ -27,7 +27,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public int add(Category category) {
-       return this.categoryMapper.insert(category);
+        this.categoryMapper.insert(category);
+        return this.categoryMapper.updateCategoryStatus(category.getParentId(),true);
     }
 
     @Override
