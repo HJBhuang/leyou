@@ -8,6 +8,7 @@ public class LeyouApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(LeyouApplication.class, args);
+        System.out.println(args);
     }
 
 }
