@@ -85,12 +85,12 @@ public class CategoryController {
         return ResponseEntity.ok(category);
     }
 
-    @RequestMapping("delete")
+    @GetMapping("delete")
     public void delete(
-            @RequestParam(value = "id", defaultValue = "0") Long pid) {
+            @RequestParam(value = "id", defaultValue = "-1") Long id) {
         Category category = new Category();
         try {
-            category.setId(pid);
+            category.setId(id);
             categoryService.delete(category);
 
         } catch (Exception e) {
