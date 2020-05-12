@@ -38,6 +38,12 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(Category category) {
+        //todo
+        //1、根据 id先查整个节点的信息
+
+        //2、查询当前节点的父节点下有几个子节点
+            //3、如何该节点是最后一个节点 需要将该节点的父节点的is_parent 更新为false
+        //4、如果不是最后一个节点 则直接删除该节点
         categoryMapper.deleteCategory(category);
     }
 }
