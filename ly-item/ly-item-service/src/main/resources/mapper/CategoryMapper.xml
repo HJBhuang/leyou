@@ -3,4 +3,13 @@
 
 <mapper namespace="com.leyou.item.mapper.CategoryMapper">
 
+
+    <!--<delete id="delete" parameterType="java.lang.String">
+    delete from ba_oper_log
+    where SEQ_NO = #{seqNo,jdbcType=CHAR}
+  </delete>-->
+    <delete id="deleteCategory" parameterType="com.leyou.item.pojo.Category">
+        delete from tb_category
+        where id=#{id}
+    </delete>
 </mapper>

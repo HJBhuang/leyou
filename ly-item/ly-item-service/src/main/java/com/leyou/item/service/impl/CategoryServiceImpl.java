@@ -35,4 +35,9 @@ public class CategoryServiceImpl implements CategoryService {
     public int modifyStatus(Long parentId, boolean isParent) {
         return this.categoryMapper.updateCategoryStatus(parentId,isParent);
     }
+
+    @Override
+    public void delete(Category category) {
+        categoryMapper.deleteCategory(category);
+    }
 }

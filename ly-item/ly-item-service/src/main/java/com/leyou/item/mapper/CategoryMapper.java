@@ -13,4 +13,6 @@ import tk.mybatis.mapper.common.Mapper;
 public interface CategoryMapper extends Mapper<Category>, IdListMapper<Category, Long> {
     @Update("update tb_category set is_parent=${isParent} where id=${parentId}")
     int updateCategoryStatus(@Param("parentId") Long parentId, @Param("isParent") boolean isParent);
+
+    void deleteCategory(Category category);
 }

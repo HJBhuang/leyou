@@ -84,4 +84,17 @@ public class CategoryController {
         //return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         return ResponseEntity.ok(category);
     }
+
+    @RequestMapping("delete")
+    public void delete(
+            @RequestParam(value = "id", defaultValue = "0") Long pid) {
+        Category category = new Category();
+        try {
+            category.setId(pid);
+            categoryService.delete(category);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -17,4 +17,6 @@ public interface CategoryService {
     int add(Category category);
 
     int modifyStatus(Long parentId, boolean b);
+
+    void delete(Category category);
 }
