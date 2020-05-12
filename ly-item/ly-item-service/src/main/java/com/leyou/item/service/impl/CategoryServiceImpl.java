@@ -55,4 +55,9 @@ public class CategoryServiceImpl implements CategoryService {
         //4、如果不是最后一个节点 则直接删除该节点
         categoryMapper.deleteCategory(category);
     }
+
+    @Override
+    public void editNodeInfo(long id, String name) {
+        categoryMapper.updateNodeNameById(id,name);
+    }
 }

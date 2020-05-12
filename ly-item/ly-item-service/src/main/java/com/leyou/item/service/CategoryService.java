@@ -19,4 +19,6 @@ public interface CategoryService {
     int modifyStatus(Long parentId, boolean b);
 
     void delete(Category category);
+
+    void editNodeInfo(long id, String name);
 }

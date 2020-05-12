@@ -6,10 +6,7 @@ import com.leyou.item.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author huangjiabao
@@ -34,5 +31,15 @@ public class BrandController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return ResponseEntity.ok(result);
+    }
+
+    @GetMapping("/edit/bid/{bid}")
+    public void edit(@PathVariable("bid") Long bid){
+        System.out.println(bid);
+    }
+
+    @GetMapping("/delete/bid/{bid}")
+    public void delete(@PathVariable("bid") Long bid){
+        System.out.println(bid);
     }
 }

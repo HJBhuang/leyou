@@ -97,4 +97,9 @@ public class CategoryController {
             e.printStackTrace();
         }
     }
+    @GetMapping("edit")
+    public void edit(@RequestParam(value = "id") long id,
+                     @RequestParam(value = "name") String name){
+        categoryService.editNodeInfo(id,name);
+    }
 }

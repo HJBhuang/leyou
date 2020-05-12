@@ -19,4 +19,6 @@ public interface CategoryMapper extends Mapper<Category>, IdListMapper<Category,
     Category selectNodeInfo(Category category);
 
     int selectParentInfo(Category categoryInfo);
+    @Update("update tb_category set name=$(name) where id=${id}")
+    void updateNodeNameById(long id, String name);
 }
