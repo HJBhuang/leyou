@@ -15,4 +15,8 @@ public interface CategoryMapper extends Mapper<Category>, IdListMapper<Category,
     int updateCategoryStatus(@Param("parentId") Long parentId, @Param("isParent") boolean isParent);
 
     void deleteCategory(Category category);
+
+    Category selectNodeInfo(Category category);
+
+    int selectParentInfo(Category categoryInfo);
 }
